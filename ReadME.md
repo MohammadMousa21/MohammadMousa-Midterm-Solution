@@ -1,8 +1,3 @@
-1
-
-2
-
-3
 
 Foundations of Computer Science
 Midterm Project
