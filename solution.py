@@ -10,9 +10,9 @@ def open_tab():#function used to save tab info
   tab = {"title": title, "url": url} #create tab as a dictionary
   if title == "" or url[:3] == "www." or url[-1:-4] == "moc." : # no title 
     print("wrong input")
-    open_tab()
-  tab_index = len(tabs)
-  tabs.append(tab)
+  elif:
+    tab_index = len(tabs)
+    tabs.append(tab)
 def close_tab():# function used to delete tab
   global tab_index
   index = int(input("Enter the index of the tab you want to close "))
