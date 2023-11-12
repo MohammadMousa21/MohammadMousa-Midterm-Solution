@@ -22,7 +22,7 @@ def close_tab():
 def display_all_tabs():
   for i in range(len(tabs)):
     print(i,tabs[i]["title"])
-    while n in range(len(nested_tabs)):
+    for n in range(len(nested_tabs)):
       if tabs[i]["title"] == nested_tabs[n]["title"]:
        print("  "+nested_tabs[n]["nest_tab"])
 def open_nested_tab():
