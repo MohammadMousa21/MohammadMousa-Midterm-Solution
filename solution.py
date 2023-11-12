@@ -7,6 +7,15 @@ def open_tab():
   tab = {"title": title, "url": url}
   tab_index = len(tabs)
   tabs.append(tab)
+def close_tab():
+  global tab_index
+  index = int(input("Enter the index of the tab you want to close "))
+  if index == None:
+      index =tab_index
+  elif 0 <= index < len(tabs):
+    tabs.pop(index)
+  else:
+      print("Invalid tab index.")
 print(""""
 1. Open Tab
 2. Close Tab
