@@ -1,5 +1,7 @@
 tabs=[]
 tab_index = 0
+from urllib.request import urlopen
+import json
 def open_tab():
   global tab_index
   title = input("Enter the title of the website: ")
@@ -12,10 +14,14 @@ def close_tab():
   index = int(input("Enter the index of the tab you want to close "))
   if index == None:
       index =tab_index
-  elif 0 < index <= len(tabs):
+  elif 0 <= index < len(tabs):
     tabs.pop(index)
   else:
       print("Invalid tab index.")
+def clear_all_tabs():
+  global tabs, current_tab_index
+  tabs = []
+  tab_index = 0
 def switch_tab():
   global current_tab_index
   index = int(input("Enter the index of the tab to switch"))
@@ -28,15 +34,15 @@ def switch_tab():
   html_bytes = page.read()
   html = html_bytes.decode("utf-8")
   print(html)
-def clear_all_tabs():
-  global tabs, current_tab_index
-  tabs = []
-  tab_index = 0
 def save_tabs():
   file_path = input("Enter the file path to save tabs: ")
   with open(file_path, 'w') as file:
     json.dump(tabs, file)
 #https://stackoverflow.com/questions/67617733/saving-the-json-file-into-a-specified-directory-using-python
+def import_tabs():
+  file_path = input("Enter the file path to import tabs from: ")
+  with open(file_path, 'r') as file:
+    tabs = json.load(file)
 print(""""
 1. Open Tab
 2. Close Tab
