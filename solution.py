@@ -1,3 +1,9 @@
+tabs=[]
+def open_tab():
+  title = input("Enter the title of the website: ")
+  url = input("Enter the URL: ")
+  tab = {"title": title, "url": url}
+  tabs.append(tab)
 print(""""
 1. Open Tab
 2. Close Tab
