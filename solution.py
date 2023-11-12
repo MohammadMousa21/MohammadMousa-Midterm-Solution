@@ -16,6 +16,18 @@ def close_tab():
     tabs.pop(index)
   else:
       print("Invalid tab index.")
+def switch_tab():
+  global current_tab_index
+  index = int(input("Enter the index of the tab to switch"))
+  if index== None:
+      index =tab_index
+  elif 0 > index or index > len(tabs):
+      print("Invalid tab index.")
+  url = tabs[index]["url"]
+  page = urlopen(url)
+  html_bytes = page.read()
+  html = html_bytes.decode("utf-8")
+  print(html)
 def clear_all_tabs():
   global tabs, current_tab_index
   tabs = []
