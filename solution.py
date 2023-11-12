@@ -37,11 +37,11 @@ def open_nested_tab():
   else:
       print("Invalid parent tab index.")
 def clear_all_tabs():
-  global tabs, current_tab_index
+  global tabs, tab_index
   tabs = []
   tab_index = 0
 def switch_tab():
-  global current_tab_index
+  global tab_index
   index = int(input("Enter the index of the tab to switch"))
   if index== None:
       index =tab_index
