@@ -1,8 +1,11 @@
 tabs=[]
+tab_index = 0
 def open_tab():
+  global tab_index
   title = input("Enter the title of the website: ")
   url = input("Enter the URL: ")
   tab = {"title": title, "url": url}
+  tab_index = len(tabs)
   tabs.append(tab)
 print(""""
 1. Open Tab
