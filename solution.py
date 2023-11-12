@@ -4,10 +4,10 @@ nested_tabs=[] #list to save nested tabs on it
 from urllib.request import urlopen # a liberay to open url 
 import json # used to save files
 def open_tab():#function used to save tab info
-  global tab_index # used global sence i need to change the value of tab_index outside the function
+  global tab_index # used global sense i need to change the value of tab_index outside the function
   title = input("Enter the title of the website: ")
   url = input("Enter the URL: ")
-  tab = {"title": title, "url": url} #create tab as dictionary
+  tab = {"title": title, "url": url} #create tab as a dictionary
   if title == "" or url[:3] == "www." or url[-1:-4] == "moc." : # no title 
     print("wrong input")
     open_tab()
