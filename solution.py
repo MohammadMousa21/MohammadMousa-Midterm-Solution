@@ -1,5 +1,6 @@
 tabs=[]
 tab_index = 0
+nested_tabs=[]
 from urllib.request import urlopen
 import json
 def open_tab():
