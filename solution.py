@@ -26,8 +26,8 @@ def display_all_tabs():
   for i in range(len(tabs)):
     print(i,tabs[i]["title"])
     for n in range(len(nested_tabs)):
-      if tabs[i]["title"] == nested_tabs[n]["title"]:
-       print("  "+nested_tabs[n]["nest_tab"])
+      if tabs[i]["title"] == nested_tabs[n]["title"]: 
+       print("  "+nested_tabs[n]["nest_tab"]) #print below the orginail link
 def open_nested_tab():
   index = int(input("Enter the index tab you want to insert a nested tab on it: "))
   if 0 <= index < len(tabs):
