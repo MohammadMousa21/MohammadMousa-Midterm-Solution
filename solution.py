@@ -19,7 +19,7 @@ def close_tab():# function used to delete tab
   if not index: # condition if the value is not numerical or no index is given 
       index =tab_index
   elif 0 < index <= len(tabs):
-    tabs.pop(index)
+    tabs.pop(index) # to delete the tap
   else:
       print("Invalid tab index.")
 def display_all_tabs():
