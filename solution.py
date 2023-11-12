@@ -40,7 +40,7 @@ def save_tabs():
     json.dump(tabs, file)
 #https://stackoverflow.com/questions/67617733/saving-the-json-file-into-a-specified-directory-using-python
 def import_tabs():
-  file_path = input("Enter the file path to import tabs from: ")
+  file_path = input("Enter the file path ")
   with open(file_path, 'r') as file:
     tabs = json.load(file)
 while True:
