@@ -8,8 +8,9 @@ def open_tab():#function used to save tab info
   title = input("Enter the title of the website: ")
   url = input("Enter the URL: ")
   tab = {"title": title, "url": url} #create tab as dictionary
-  if title == "": # no title
-    title = input("please enter the title of the website: ")
+  if title == "" or url[:3] == "www." or url[-1:-4] == "moc." : # no title 
+    print("wrong input")
+    open_tab()
   tab_index = len(tabs)
   tabs.append(tab)
 def close_tab():# function used to delete tab
