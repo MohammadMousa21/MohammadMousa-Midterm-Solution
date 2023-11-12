@@ -25,6 +25,14 @@ def display_all_tabs():
     while n in nested_tabs:
       if tabs[i]["title"] == nested_tabs[n]["title"]
       print("  "+nested_tabs[n]["nest_tab"])
+def open_nested_tab():
+  index = int(input("Enter the index tab you want to insert a nested tab on it: "))
+  if 0 <= index < len(tabs):
+      nested_tab_title = input("Enter the title of the nested tab: ")
+      url = input("Enter the URL of the nested tab: ")
+      nested_tabs = {"title": tabs[index]["title"],"nested_tab_title":nested_tab_title, "url": url}
+  else:
+      print("Invalid parent tab index.")
 def clear_all_tabs():
   global tabs, current_tab_index
   tabs = []
