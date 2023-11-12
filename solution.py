@@ -18,6 +18,12 @@ def close_tab():
     tabs.pop(index)
   else:
       print("Invalid tab index.")
+def display_all_tabs():
+  for i in range(len(tabs)):
+    print(i,tabs[i]["title"])
+    while n in nested_tabs:
+      if tabs[i]["title"] == nested_tabs[n]["title"]
+      print("  "+nested_tabs[n]["nest_tab"])
 def clear_all_tabs():
   global tabs, current_tab_index
   tabs = []
