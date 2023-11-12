@@ -55,4 +55,24 @@ while True:
      8. Import Tabs
      9. Exit
     """)
+  choice = input("Enter your choice: ")
+        if choice == '1':
+            open_tab()
+        elif choice == '2':
+            close_tab()
+        elif choice == '3':
+            switch_tab()
+        elif choice == '4':
+            display_all_tabs()
+        elif choice == '5':
+            open_nested_tab()
+        elif choice == '6':
+            clear_all_tabs()
+        elif choice == '7':
+            save_tabs()
+        elif choice == '8':
+            import_tabs()
+        elif choice == '9':
+            print("Exiting the program")
+            break
   
