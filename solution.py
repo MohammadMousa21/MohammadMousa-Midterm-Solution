@@ -1,21 +1,23 @@
-tabs=[]
-tab_index = 0
-nested_tabs=[]
-from urllib.request import urlopen
-import json
-def open_tab():
-  global tab_index
+tabs=[] #used to save the tab info as a list
+tab_index = 0 #used to save the current tab index
+nested_tabs=[] #list to save nested tabs on it 
+from urllib.request import urlopen # a liberay to open url 
+import json # used to save files
+def open_tab():#function used to save tab info
+  global tab_index # used global sence i need to change the value of tab_index outside the function
   title = input("Enter the title of the website: ")
   url = input("Enter the URL: ")
-  tab = {"title": title, "url": url}
+  tab = {"title": title, "url": url} #create tab as dictionary
+  if title == "": # no title
+    title = input("please enter the title of the website: ")
   tab_index = len(tabs)
   tabs.append(tab)
-def close_tab():
+def close_tab():# function used to delete tab
   global tab_index
   index = int(input("Enter the index of the tab you want to close "))
-  if index == None:
+  if not index: # condition if the value is not numerical or no index is given 
       index =tab_index
-  elif 0 <= index < len(tabs):
+  elif 0 < index <= len(tabs):
     tabs.pop(index)
   else:
       print("Invalid tab index.")
@@ -90,4 +92,4 @@ while True:
    elif choice == '9':
       print("Exiting the program")
       break
-  
+
