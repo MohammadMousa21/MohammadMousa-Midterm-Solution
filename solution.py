@@ -47,7 +47,7 @@ def switch_tab():
       index =tab_index
   elif 0 > index or index > len(tabs):
       print("Invalid tab index.")
-  url = tabs[index]["url"]
+  url = tabs[index]["url"] #https://stackoverflow.com/questions/4302027/how-to-open-a-url-in-python
   page = urlopen(url)
   html_bytes = page.read()
   html = html_bytes.decode("utf-8")
