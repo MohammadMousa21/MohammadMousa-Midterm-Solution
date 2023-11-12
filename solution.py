@@ -32,6 +32,11 @@ def clear_all_tabs():
   global tabs, current_tab_index
   tabs = []
   tab_index = 0
+def save_tabs():
+  file_path = input("Enter the file path to save tabs: ")
+  with open(file_path, 'w') as file:
+    json.dump(tabs, file)
+#https://stackoverflow.com/questions/67617733/saving-the-json-file-into-a-specified-directory-using-python
 print(""""
 1. Open Tab
 2. Close Tab
