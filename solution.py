@@ -12,10 +12,14 @@ def close_tab():
   index = int(input("Enter the index of the tab you want to close "))
   if index == None:
       index =tab_index
-  elif 0 <= index < len(tabs):
+  elif 0 < index <= len(tabs):
     tabs.pop(index)
   else:
       print("Invalid tab index.")
+def clear_all_tabs():
+  global tabs, current_tab_index
+  tabs = []
+  tab_index = 0
 print(""""
 1. Open Tab
 2. Close Tab
